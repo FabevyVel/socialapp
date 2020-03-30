@@ -1,0 +1,138 @@
+    
+    .login-container{
+        height: 100vh;
+        align-content: center;
+        padding-top: 200px;
+        background: #f5f7ff;
+      .card{
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 560px;
+        padding: 0;
+        background-color: #fff;
+      }
+
+      .card-body{
+        padding: 0;
+        border-radius: 0px;
+        box-shadow: 1px 1px 22px #cccc;
+      }
+
+      .card-header{
+        background-color: #fff;
+      }
+
+      .social_icon span{
+        font-size: 60px;
+        margin-left: 10px;
+        color: #FFC312;
+      }
+
+      .social_icon span:hover{
+        color: black;
+        cursor: pointer;
+      }
+
+      .card-header h3{
+        color: black;
+      }
+
+      .social_icon{
+        position: absolute;
+        right: 20px;
+        top: -45px;
+      }
+
+      .input-group-prepend span{
+        width: 35px;
+        color: #fff;
+        background: #5e72e4;
+        border: 1px solid #5e72e4;
+      }
+
+      input {
+        border: 1px solid #ddd;
+      }
+
+      input:focus{
+        outline: 0 0 0 0  !important;
+        box-shadow: 0 0 0 0 !important;
+        border: 1px solid #5e72e4;
+      }
+
+      .remember{
+        color: black;
+      }
+
+      .remember input
+      {
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+        margin-right: 5px;
+      }
+
+      .login_btn{
+        color: black;
+        background-color: #FFC312;
+        width: 100px;
+      }
+
+      .login_btn:hover{
+        color: black;
+        background-color: black;
+      }
+
+      .links{
+        color: black;
+      }
+
+      .links a{
+        margin-left: 4px;
+      }
+
+      /*Styles*/
+
+      .small-loader{
+        float: left;
+        margin-top: 20px;
+      }
+      .btn-login{
+        float: left;
+        margin-right: 10px;
+      }
+      .loginerror {
+        color: red;
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        p {
+          margin: 0;
+        }
+      }
+      .btn-primary {
+        margin-top: 20px;
+      }
+      .login-text {
+        background: #5e72e4;
+        color: #fff;
+        font-size: 35px;
+        text-align: center;
+        padding: 15px;
+        text-transform: uppercase;
+        h1 {
+          font-size: 30px;
+          margin: 0;
+        }
+      }
+      .text-sign-in {
+        color: #5e72e4 !important;
+        font-size: 16px;
+      }
+      .login-content {
+        padding: 40px 60px;
+        border-radius: 0 !important;
+        background: #fff;
+      }
+    }
+

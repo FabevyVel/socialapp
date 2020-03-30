@@ -33,8 +33,16 @@ export class TravellersList implements OnInit, OnDestroy {
 
     ngOnInit(): void {
       this.dtOptions = {
-        pagingType: 'full_numbers',
-        pageLength: 15
+        pagingType: 'simple_numbers',
+        pageLength: 15,
+        "language": {
+          'paginate': {
+            'first': '',
+            "previous": "&#xab",
+            "next": "&#xbb",
+            'last': ''
+          }
+        }
       };
 
       this.getConfigResponse()

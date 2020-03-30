@@ -1,1 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: "Pluto Sans", sans-serif;
+}
+
+.main-panel .navbar {
+  background: #3d4356 !important; ;
+  color: #fff;
+  position: fixed;
+}
+.sidebar[data-color=white] .logo .simple-text, .off-canvas-sidebar[data-color=white] .logo .simple-text {
+  color: #fff ;
+}
+
+.sidebar .logo a.logo-normal, .off-canvas-sidebar .logo a.logo-normal {
+  padding: 10px 0 8px;
+}
+
+.sidebar .logo, .off-canvas-sidebar .logo {
+  background: #3d4356;
+}
+
+.dataTable thead tr, .dataTable thead {
+  background: #5e72e4;
+  border-radius: 20px;
+}
+.dataTable thead th:first-child {
+  border-top-left-radius: 4px;
+}
+.dataTable thead th:last-child {
+  border-top-right-radius: 4px;
+}
+.dataTable thead th {
+  color: #fff;
+}
+
+table.dataTable thead th, table.dataTable thead td,
+table.dataTable.no-footer{
+  border-bottom: none;
+}
+
+.dataTables_filter input {
+  width: 200px;
+  border: 1px solid #aaa;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  margin-left: 0;
+}
+
+.navbar .navbar-nav .nav-link, .navbar.navbar-transparent a:not(.dropdown-item):not(.btn) {
+  color: #fff !important;
+}
+
+.sidebar .sidebar-wrapper li.active > a:not([data-toggle=collapse]):after, .sidebar .sidebar-wrapper li.active > [data-toggle=collapse] + div .nav li:after {
+  border-right: 17px solid #fff;
+}
+
+.sidebar .sidebar-wrapper, table.dataTable tbody tr {
+  background: #f5f7ff;
+}
+
+.main-panel  {
+  background: #fff;
+}
+
+.btn-primary, .btn-primary:focus, .btn-primary:hover, .btn-primary:active {
+  background-color: #5e72e4 !important;
+}
+
+.input-group, .form-group {
+  margin-bottom: 18px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: #fff !important;
+  border: 1px solid #979797;
+  background: #5e72e4;
+}
+.dataTables_paginate {
+  border: 1px solid #5e72e4;
+  padding: 0 !important;
+  margin-top: 20px;
+}
+
+.add-followup {
+  background: #4CAF50;
+  padding: 5px 10px;
+  border-radius: 3px;
+  box-shadow: none;
+  border: none;
+  color: #fff;
+}
+

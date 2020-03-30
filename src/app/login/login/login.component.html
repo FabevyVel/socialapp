@@ -1,0 +1,41 @@
+<div class="login-container d-flex justify-content-center">
+	<div class="">
+		<div class="card">			
+			<div class="card-body">
+				<form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+          <div class="login-text">
+            <h1>Login</h1>
+          </div>
+          <div class="login-content">
+            <p class="text-sign-in">Sign In to your account</p>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-user"></i><i class="icon-user"></i> </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Username" id="email" required [(ngModel)]="login_user.email" name="email">
+
+            </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-key"></i></span>
+              </div>
+              <input type="password" class="form-control" placeholder="Password" required [(ngModel)]="login_user.password" name="password">
+              <div class="error loginerror" *ngIf="loginerror">
+                <p>Incorrect Username/password</p>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+                <button class="btn-login btn btn-primary px-4" type="submit">Login</button>
+                <div class="small-loader" *ngIf="showloader">
+                  <img alt="loader" width="20" height="20" src="assets/img/loader.gif">
+              </div>
+<!--              <div class="col-md-6 text-right">-->
+<!--                <button class="btn btn-link px-0" type="button">Forgot password?</button>-->
+<!--              </div>-->
+					</div>
+          </div>
+				</form>
+			</div>			
+		</div>
+	</div>
+</div>
