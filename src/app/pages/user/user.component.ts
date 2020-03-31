@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class UserComponent implements OnInit{
+
+	 inputObj = {};
+	  gender = null; 
+
     ngOnInit(){
+
+    }
+    
+     selectedRadioButtonValue
+
+
+    updateProfile(){
+    console.log(this.inputObj);
     }
 }

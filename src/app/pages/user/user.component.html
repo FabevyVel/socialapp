@@ -1,83 +1,555 @@
 <div class="row">
-
   <div class="col-md-12">
     <div class="card card-user">
       <div class="card-header">
         <h5 class="card-title">Edit Profile</h5>
       </div>
       <div class="card-body">
-        <form>
-          <div class="row">
-            <div class="col-md-5 pr-1">
-              <div class="form-group">
-                <label>Company (disabled)</label>
-                <input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
-              </div>
-            </div>
-            <div class="col-md-3 px-1">
-              <div class="form-group">
-                <label>Username</label>
-                <input type="text" class="form-control" placeholder="Username" value="michael23">
-              </div>
-            </div>
-            <div class="col-md-4 pl-1">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" placeholder="Email">
-              </div>
-            </div>
-
-            <div class="col-md-6 pr-1">
-              <div class="form-group">
-                <label>First Name</label>
-                <input type="text" class="form-control" placeholder="Company" value="Chet">
-              </div>
-            </div>
-            <div class="col-md-6 pl-1">
-              <div class="form-group">
-                <label>Last Name</label>
-                <input type="text" class="form-control" placeholder="Last Name" value="Faker">
-              </div>
-            </div>
-
-            <div class="col-md-12">
-              <div class="form-group">
-                <label>Address</label>
-                <input type="text" class="form-control" placeholder="Home Address" value="Melbourne, Australia">
-              </div>
-            </div>
-
-            <div class="col-md-6 pr-1">
-              <div class="form-group">
-                <label>City</label>
-                <input type="text" class="form-control" placeholder="City" value="Melbourne">
-              </div>
-            </div>
-            <div class="col-md-6 px-1">
-              <div class="form-group">
-                <label>Country</label>
-                <input type="text" class="form-control" placeholder="Country" value="Australia">
-              </div>
-            </div>
-            <div class="col-md-4 pl-1">
-              <div class="form-group">
-                <label>Postal Code</label>
-                <input type="number" class="form-control" placeholder="ZIP Code">
-              </div>
-            </div>
-
-            <div class="col-md-8">
-              <div class="form-group">
-                <label>About Me</label>
-                <textarea class="form-control textarea">Oh so, your weak rhyme You doubt I'll bother, reading into it</textarea>
-              </div>
-            </div>
-
-            <div class="update ml-auto mr-auto">
-              <button type="submit" class="btn btn-primary btn-round">Update Profile</button>
+        <div class="row">
+          <div class="col-md-4 pr-1">
+            <div class="form-group">
+              <label><b>Name</b></label>
+               <input type="text" class="form-control"  [(ngModel)] = "inputObj.name">
             </div>
           </div>
-        </form>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Age</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.age" >
+              </div>
+            </div>
+            <div class="col-md-4 pl-1">
+              <div class="form-group">
+                <label for="exampleInputEmail1"><strong>Gender</strong></label> <br>              
+                 <input type="radio" name = "options" value="Male"  (change)='inputObj.gender=$event.target.value'/>Male<br>
+                 <input type="radio" name = "options" value="Female" (change)='inputObj.gender=$event.target.value'/>Female <br>
+                 <input type="radio" name = "options" value="male"  (change)='inputObj.gender=$event.target.value'/>Transgender<br> 
+                 <input type="radio" name = "options" value="male"  (change)='inputObj.gender=$event.target.value'/>Unknown<br>
+                 <!-- <form>
+  <input type="radio" id="male" name="gender" >
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender">
+  <label for="female">Female</label><br>  
+  <input type="radio" id="female" name="gender">
+  <label for="female">Transgender</label><br>  
+  <input type="radio" id="female" name="gender">
+  <label for="female">Unknown</label><br>  
+</form> -->
+             </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>Address</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.address">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Country</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.country">
+              </div>
+            </div>
+            <div class="col-md-4 pl-1">
+              <div class="form-group">
+                <label for="exampleInputEmail1"><b>State</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.state" >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>Passport No</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.passportno">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Occuption</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.occupation">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>Block</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.block">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Passenger ID</b></label>
+                 <input type="text" class="form-control"[(ngModel)] = "inputObj.passengeroid" >
+              </div>
+            </div>
+            <div class="col-md-4 pl-1">
+              <div class="form-group">
+                <label for="exampleInputEmail1"><b>Landed At</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.landedat">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>Date Of Arrival</b></label><br>
+               <!-- <input type="date" > -->
+               <input [ngModel]="inputObj.date | date:'yyyy-MM-dd'" (ngModelChange)="inputObj.date = $event" type="date" name="date"/>
+              </div>
+            </div>
+            <div class="col-md-4 pl-1">
+              <div class="form-group">
+                <label><b>Call Date Time</b></label><br>
+                 <input type="datetime-local" id="birthdaytime" name="birthdaytime" [(ngModel)] = "inputObj.calldatetime">
+              </div>
+            </div>
+            <div class="col-md-4 pl-1">
+              <div class="form-group">
+                <label><b>Call Status</b></label><br>
+                 <select id="Status"  [(ngModel)] = "inputObj.callstatus">
+                   <option value="not reachable">Not reachable</option>
+                   <option value="not attended">Not Attended</option>
+                   <option value="switched off">Switched Off</option>
+                   <option value="not a valid no">Not a Valid No.</option>
+                   <option value="wrong no">Wrong No</option>
+                   <option value="answered by self">Answered by self</option>
+                   <option value="answered by relatives">Answered by relatives</option>
+                   <option value="answered by wrong person">Answered by wrong person</option>
+                   <option value="rejected">Rejected</option>
+                   <option value="skip">Skip</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Travel from overseas/exposed city verified?</b></label>
+                  <select id="Status" [(ngModel)] = "inputObj.overseas">
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Ends the call</option>
+                    <option>Talks arrogant</option>
+                    <option>Skip</option>
+                  </select> 
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Staying Address</b></label><br>
+                 <textarea id="w3mission" rows="2" cols="40" [(ngModel)] = "inputObj.stayingaddress"></textarea>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Reach diretly to staying address?</b></label><br>
+                 <form>
+                   <input type="radio" name = "options" value="Yes" (change)='inputObj.reachdirectly=$event.target.value'/>Yes<br>
+                   <input type="radio" name = "options" value="No"  (change)='inputObj.reachdirectly=$event.target.value'/>No <br>
+
+ <!--  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Yes</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">No</label><br>   -->
+                  </form>
+              </div>
+             </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>If no, travelled places</b></label>
+                 <input type="text" class="form-control"  [(ngModel)] = "inputObj.travelledplaces">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Mode of transportation</b></label><br>
+                <select id="cars"  [(ngModel)] = "inputObj.transportmode">
+                  <option value="car">Car</option>
+                  <option value="bus">Bus</option>
+                  <option value="train">Train</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4 pl-1">
+              <div class="form-group">
+                <label><b>More details on transport?</b></label>
+                   <textarea class="form-control textarea"  [(ngModel)] = "inputObj.transportdetails"> </textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Reached Date to Staying Address</b></label>
+                  <input type="date"  [(ngModel)] = "inputObj.stayingaddressdate">
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>How long you are in Staying Address?</b></label>
+                  <input type="text" class="form-control" [(ngModel)] = "inputObj.stayingaddressduration">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Any Government officials have visited you?</b></label><br>
+                <form>
+                  <input type="radio" name = "options" value="Yes" (change)='inputObj.govofficialsvisited=$event.target.value'/>Yes<br>
+                  <input type="radio" name = "options" value="No"  (change)='inputObj.govofficialsvisited=$event.target.value'/>No <br>  
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Have you received any advice from  Government Officials?</b></label><br>
+                <form>
+                  <input type="radio" name = "options" value="Yes" (change)='inputObj.govofficialsadvice=$event.target.value'/>Yes<br>
+                  <input type="radio" name = "options" value="No"  (change)='inputObj.govofficialsadvice=$event.target.value'/>No <br>  
+                </form>
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>What advice you have received?</b></label>
+                  <textarea class="form-control textarea"  [(ngModel)] = "inputObj.advicereceived"> </textarea>
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Are you going out to home?</b></label><br>
+                 <form>
+                   <input type="radio" name = "options" value="Yes" (change)='inputObj.goingout=$event.target.value'/>Yes<br>
+                   <input type="radio" name = "options" value="No"  (change)='inputObj.goingout=$event.target.value'/>No <br>  
+                 </form>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+             <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Are you in Quarantine </b></label><br>
+              <form>
+                <input type="radio" name = "options" value="Yes" (change)='inputObj.areyouquarantine=$event.target.value'/>Yes<br>
+                <input type="radio" name = "options" value="No"  (change)='inputObj.areyouquarantine=$event.target.value'/>No <br>
+              </form>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Quarantine Start Date</b></label><br>
+                <input type="date"  [(ngModel)] = "inputObj.startdate">
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>Quarantine End Date</b></label><br>
+                 <input type="date"  [(ngModel)] = "inputObj.enddate">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Curent Quarantine Day</b></label>
+                <input type="text" class="form-control"  [(ngModel)] = "inputObj.quarantineday">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Is Quarentine Completed</b></label><br>
+                 <form>
+                    <input type="radio" name = "options" value="Yes" (change)='inputObj.quarentinecompleted=$event.target.value'/>Yes<br>
+                    <input type="radio" name = "options" value="No"  (change)='inputObj.quarentinecompleted=$event.target.value'/>No <br>
+                  </form>
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>Does the person have any of the following symptoms</b></label><br>
+              <form>
+                <input type="radio" name = "options" value="Cough" (change)='inputObj.symptoms=$event.target.value'/>Cough<br>
+                <input type="radio" name = "options" value="Fever"  (change)='inputObj.symptoms=$event.target.value'/>Fever<br>
+                <input type="radio" name = "options" value="Sore Throat" (change)='inputObj.symptoms=$event.target.value'/>Sore Throat<br>
+                <input type="radio" name = "options" value="Breathing Difficulties" (change)='inputObj.symptoms=$event.target.value'/>Breathing Difficulties<br>
+                <input type="radio" name = "options" value="Fatigue" (change)='inputObj.symptoms=$event.target.value'/>Fatigue<br>
+                <input type="radio" name = "options" value="Headache"  (change)='inputObj.symptoms=$event.target.value'/>Headache<br>
+                <input type="radio" name = "options" value="Vomiting" (change)='inputObj.symptoms=$event.target.value'/>Vomiting<br>
+                <input type="radio" name = "options" value="Diarrhea"  (change)='inputObj.symptoms=$event.target.value'/>Diarrhea<br>
+                <input type="radio" name = "options" value="Chills" (change)='inputObj.symptoms=$event.target.value'/>Chills<br>
+                <input type="radio" name = "options" value="None"  (change)='inputObj.symptoms=$event.target.value'/>None<br>
+              </form>
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>If symptoms, How many Days</b></label>
+                  <input type="text" class="form-control" [(ngModel)] = "inputObj.symptomsdays">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Medical History</b></label><br>
+                  <form>
+                    <input type="radio" name = "options" value="Diabetic Person" (change)='inputObj.symptoms=$event.target.value'/> Diabetic Person<br>
+                    <input type="radio" name = "options" value="Cardiac Person"  (change)='inputObj.symptoms=$event.target.value'/>Cardiac Person<br>
+                    <input type="radio" name = "options" value="Chronic Lung" (change)='inputObj.symptoms=$event.target.value'/>Chronic Lung Disease<br>
+                    <input type="radio" name = "options" value="Asthma" (change)='inputObj.symptoms=$event.target.value'/>Asthma<br>
+                    <input type="radio" name = "options" value="Hypertension" (change)='inputObj.symptoms=$event.target.value'/>Hypertension<br>
+                    <input type="radio" name = "options" value=" No Risk"  (change)='inputObj.symptoms=$event.target.value'/> No Risk<br>
+                    </form>
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>Attended functions in the last 14 days</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.functions">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Any visitors in the last 14 days</b></label>
+                <input type="text" class="form-control" [(ngModel)] = "inputObj.visitors">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Are you Hospitalized?</b></label><br>
+               <form>
+                 <input type="radio" name = "options" value="Yes" (change)='inputObj.hospitalized=$event.target.value'/>Yes<br>
+                <input type="radio" name = "options" value="No"  (change)='inputObj.hospitalized=$event.target.value'/>No <br>
+              </form>
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>If Yes, Hospital Name</b></label>
+                <input type="text" class="form-control" [(ngModel)] = "inputObj.nameofthehospital">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Hospital Location</b></label><br>
+               <select id="locations"  [(ngModel)] = "inputObj.location">
+                <option >Tenkasi</option>
+                <option >Alangulam</option>
+                <option >Sankarankovil</option>
+                <option >Highground</option>
+             </select>
+              </div>
+            </div>
+          </div>
+           <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Owner of Hospital</b></label><br>
+               <form>
+                 <input type="radio" name = "options" value="government"  (change)='inputObj.owner=$event.target.value'/>Government<br> 
+                 <input type="radio" name = "options" value="private"  (change)='inputObj.owner=$event.target.value'/>Private<br>         
+               </form>
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>Date of Admission</b></label><br>
+                 <input type="date"  [(ngModel)] = "inputObj.location">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Ward</b></label><br>
+                 <select id="cars"  [(ngModel)] = "inputObj.ward">
+                  <option >Normal</option>
+                  <option >Corona</option>
+                  <option >ICU</option>
+                  <option >Oxygen Therapy</option>
+                 <option  >Ventilation</option>
+                </select>
+              </div>
+            </div>
+          </div>
+           <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Have Discharged?</b></label><br>
+                  <form>
+                    <input type="radio" name = "options" value="Yes" (change)='inputObj.discharged=$event.target.value'/>Yes<br>
+                    <input type="radio" name = "options" value="No"  (change)='inputObj.discharged=$event.target.value'/>No <br>
+                  </form>
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>If Yes, Discharged Date</b></label><br>
+                  <input type="date"  [(ngModel)] = "inputObj.dischargeddate">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Last Visited Government Officials</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.visitedofficials">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Visited Date</b></label><br>
+                  <input type="date"   [(ngModel)] = "inputObj.visiteddate">
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>Total Family Members</b></label>
+                  <input type="text" class="form-control" [(ngModel)] = "inputObj.totalfamilymembers">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Children Less than 5 Years Count</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.children">
+              </div>
+            </div>
+          </div>
+           <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Senior Citizen Count</b></label>
+                   <input type="text" class="form-control" [(ngModel)] = "inputObj.senior">
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>Attending Person</b></label>
+                  <input type="text" class="form-control" [(ngModel)] = "inputObj.attendingperson">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Relationship</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.relationship">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Call Date</b></label>
+                 <input type="date"   [(ngModel)] = "inputObj.calleddate">
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>Start Time</b></label><br>
+               <form action="/action_page.php">
+                 <input type="time" id="appt" name="appt" [(ngModel)] = "inputObj.starttime">
+                </form>
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>End Time</b></label><br>
+                <form action="/action_page.php">
+                  <input type="time" id="appt" name="appt" [(ngModel)] = "inputObj.endtime">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Duration</b></label>
+                  <input type="text" class="form-control" [(ngModel)] = "inputObj.duration">
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>Field</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.field">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Current Condition</b></label>
+               <form>
+                  <input type="radio" name = "options" value="Normal" (change)='inputObj.currentcondition=$event.target.value'/>Normal<br>
+                  <input type="radio" name = "options" value="Symptoms"  (change)='inputObj.currentcondition=$event.target.value'/>Symptoms <br>
+                  <input type="radio" name = "options" value="NoCheck so far" (change)='inputObj.currentcondition=$event.target.value'/>No Check Sofar<br>
+                  <input type="radio" name = "options" value="Critical" (change)='inputObj.currentcondition=$event.target.value'/>Critical<br>
+                 
+               </form>
+  <!-- input type="radio" id="male" name="gender" value="male">
+  <label for="male">Normal</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Symptoms</label><br>  
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">No Check Sofar</label><br>  
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Critical</label><br>   -->
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Next Cal Schedule</b></label><br>
+                 <input type="date"   [(ngModel)] = "inputObj.nextcalldate">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label><b>Field Officer Report</b></label>
+                 <textarea class="form-control textarea"   [(ngModel)] = "inputObj.fieldofficerreport"> </textarea>
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label><b>Field Report By</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.fieldreport">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Designation</b></label>
+                 <input type="text" class="form-control" [(ngModel)] = "inputObj.designation">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label> <b>Department</b></label>
+                 <textarea class="form-control textarea"   [(ngModel)] = "inputObj.department"></textarea>
+              </div>
+            </div>
+            <div class="col-md-4 pr-1">
+              <div class="form-group">
+                <label> <b>Report Date </b></label><br>
+                 <input type="date"   [(ngModel)] = "inputObj.reportdate">
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label><b>Next Field Visit Date</b></label><br>
+                 <input type="date"   [(ngModel)] = "inputObj.nextfieldvisit">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="update ml-auto mr-auto">
+              <button type="submit" class="btn btn-primary btn-round" (click) = "updateProfile()">Update Profile</button>
+            </div>
+          </div>       
       </div>
     </div>
   </div>
